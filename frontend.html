@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>frontend_Page</title>
+
+    <style>
+      *{
+        margin:auto;
+      }
+#container{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeaat(4,auto);
+  gap: 20px;
+  margin-top: 20px;
+}
+#container>p+img{
+  height: 50px;
+}
+h1{
+  text-align: center;
+}
+
+
+    </style>
+    
+</head>
+<body>
+  
+<h1>Masai Investors</h1>
+<div id="container"></div>
+</body>
+</html>
+
+<script>
+  var InvestArr = JSON.parse(localStorage.getItem("InvestorsData"))
+  console.log( InvestArr )
+
+ InvestArr.forEach(function(elem){
+  var box = document.createElement("div");
+   box.style.margin="auto";
+   box.style.width="70%";
+   box.style.boxShadow= "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;";
+  
+  var avatar = document.createElement("img");
+  avatar.setAttribute("src",elem.Inv_img);
+  avatar.style.borderTopLeftRadius="15px";
+  avatar.style.borderTopRightRadius="15px";
+  avatar.style.width="100%";
+  
+  var Inv_name =  document.createElement("h3");
+  Inv_name.innerText = elem.Inv_name;
+  Inv_name.style.textAlign="center";
+
+  var role =  document.createElement("p");
+  role.innerText = elem.Inv_role;
+  role.style.textAlign="center";
+
+  var logo =  document.createElement("img");
+  logo.setAttribute("src",elem.Inv_cologo);
+  // logo.style.margin="auto";
+  logo.style.width="50%";
+  logo.style.display="flex";
+  logo.style.justifyContent="center";
+
+
+//   var btn= document.createElement("button");
+//   btn.addEventListener('click', function(Delete){
+//  event.target. parentNode.remove();
+//   })
+
+  box.append(avatar,Inv_name,role,logo);
+
+  document.querySelector("#container").append(box);
+
+})
+
+
+</script>
