@@ -1,0 +1,81 @@
+#container{
+    /* border: 1px solid red; */
+    width: 60%;
+    height: 700px;
+    margin: auto;
+    margin-top: 10px;
+   
+}
+#container>div:nth-child(1){
+    margin: auto;
+    width: 60%;
+    text-align: center;
+}
+
+#box{
+    width:60%;
+    margin: auto;
+    margin-top: 40px;
+    padding: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#sign{
+    width:50%;
+    margin-left: 120px;
+    padding:5px;
+    cursor: pointer;
+}
+#sign:hover{
+    background-color: rgb(138, 253, 253);
+    color: brown;
+    font-size: 18px;
+}
+h2{
+    text-align: center;
+}
+.text{
+    margin-left: 20px; 
+}
+
+.space{
+margin: auto;
+margin-top: 5px;
+margin-bottom: 20px;
+margin-left: 20px;
+width: 80%;
+height: 40px;
+border-radius: 5px;
+border-color: rgb(81, 78, 78);
+
+border-top-style: hidden;
+border-right-style: hidden;
+border-left-style: hidden;
+border-bottom-style: groove;
+background-color: #eee;
+}
+.space:hover{
+  background-color: white;
+  font-style: oblique;
+}
+
+h5{
+    text-align: center;
+    margin-top: -5px;;
+}
+
+button{
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 40%;
+    margin-left: 150px;
+    margin-top: -10px;
+    border-radius: 5px;
+    border: none
+}
+
+button:hover{
+    background-color: rgb(66, 66, 238);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
